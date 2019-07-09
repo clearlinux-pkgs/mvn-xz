@@ -4,16 +4,18 @@
 #
 Name     : mvn-xz
 Version  : 1.5
-Release  : 2
+Release  : 3
 URL      : https://repo1.maven.org/maven2/org/tukaani/xz/1.5/xz-1.5.jar
 Source0  : https://repo1.maven.org/maven2/org/tukaani/xz/1.5/xz-1.5.jar
-Source1  : https://repo1.maven.org/maven2/org/tukaani/xz/1.4/xz-1.4.jar
-Source2  : https://repo1.maven.org/maven2/org/tukaani/xz/1.4/xz-1.4.pom
-Source3  : https://repo1.maven.org/maven2/org/tukaani/xz/1.5/xz-1.5.pom
-Source4  : https://repo1.maven.org/maven2/org/tukaani/xz/1.6/xz-1.6.jar
-Source5  : https://repo1.maven.org/maven2/org/tukaani/xz/1.6/xz-1.6.pom
-Source6  : https://repo1.maven.org/maven2/org/tukaani/xz/1.8/xz-1.8.jar
-Source7  : https://repo1.maven.org/maven2/org/tukaani/xz/1.8/xz-1.8.pom
+Source1  : https://repo1.maven.org/maven2/org/tukaani/xz/1.0/xz-1.0.jar
+Source2  : https://repo1.maven.org/maven2/org/tukaani/xz/1.0/xz-1.0.pom
+Source3  : https://repo1.maven.org/maven2/org/tukaani/xz/1.4/xz-1.4.jar
+Source4  : https://repo1.maven.org/maven2/org/tukaani/xz/1.4/xz-1.4.pom
+Source5  : https://repo1.maven.org/maven2/org/tukaani/xz/1.5/xz-1.5.pom
+Source6  : https://repo1.maven.org/maven2/org/tukaani/xz/1.6/xz-1.6.jar
+Source7  : https://repo1.maven.org/maven2/org/tukaani/xz/1.6/xz-1.6.pom
+Source8  : https://repo1.maven.org/maven2/org/tukaani/xz/1.8/xz-1.8.jar
+Source9  : https://repo1.maven.org/maven2/org/tukaani/xz/1.8/xz-1.8.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Public-Domain
@@ -38,26 +40,32 @@ data components for the mvn-xz package.
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.5
 cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.5
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.4
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.4
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.0
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.0
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.0
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.0
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.4
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.4
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.4
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.4
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.4
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.5
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.5
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.5
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.6
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.6
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.6
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.6
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.6
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.6
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.8
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.8
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.8
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.8
-cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.8
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.8
 
 
 %files
@@ -65,6 +73,8 @@ cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/tukaani/xz/1.8
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/org/tukaani/xz/1.0/xz-1.0.jar
+/usr/share/java/.m2/repository/org/tukaani/xz/1.0/xz-1.0.pom
 /usr/share/java/.m2/repository/org/tukaani/xz/1.4/xz-1.4.jar
 /usr/share/java/.m2/repository/org/tukaani/xz/1.4/xz-1.4.pom
 /usr/share/java/.m2/repository/org/tukaani/xz/1.5/xz-1.5.jar
