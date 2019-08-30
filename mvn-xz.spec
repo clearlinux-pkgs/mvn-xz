@@ -4,7 +4,7 @@
 #
 Name     : mvn-xz
 Version  : 1.5
-Release  : 4
+Release  : 5
 URL      : https://repo1.maven.org/maven2/org/tukaani/xz/1.5/xz-1.5.jar
 Source0  : https://repo1.maven.org/maven2/org/tukaani/xz/1.5/xz-1.5.jar
 Source1  : https://repo1.maven.org/maven2/org/tukaani/xz/1.0/xz-1.0.jar
